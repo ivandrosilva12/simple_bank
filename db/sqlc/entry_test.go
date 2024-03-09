@@ -16,7 +16,7 @@ func createRandonEntry(t *testing.T) Entry {
 
 	arg := CreateEntryParams{
 		AccountID: account1.ID,
-		Amount:    util.RandonMoney(),
+		Amount:    util.RandomMoney(),
 	}
 
 	entry, err := testQueries.CreateEntry(context.Background(), arg)
@@ -56,7 +56,7 @@ func TestUpdateEntry(t *testing.T) {
 
 	arg := UpdateEntryParams{
 		ID:     entry1.ID,
-		Amount: util.RandonMoney(),
+		Amount: util.RandomMoney(),
 	}
 
 	entry2, err := testQueries.UpdateEntry(context.Background(), arg)
